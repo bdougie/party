@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "title": "Next.js Virtual Event Starter Kit",
+  "description": "Fully customizable starter kit for your virtual event.",
+  "previewMedia": {
+    "type": "image",
+    "src": ".sanity-template/frontend.png",
+    "alt": "Frontend"
+  },
+  "technologies": [{
+      "id": "nextjs",
+      "name": "Next.js",
+      "url": "https://nextjs.org/"
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "url": "https://vercel.com/"
+    }
+  ],
+  "deployment": {
+    "provider": "vercel",
+    "studio": {
+      "basePath": "/studio"
+    },
+    "deployHook": {
+      "name": "Production deployment hook",
+      "envVars": ["SANITY_STUDIO_BUILD_HOOK"]
+    },
+    "envVars": {
+      "projectId": ["NEXT_PUBLIC_SANITY_PROJECT_ID"],
+      "dataset": ["NEXT_PUBLIC_SANITY_DATASET"]
+    },
+    "corsOrigins": [{
+      "origin": "http://localhost:3000",
+      "allowCredentials": true
+    }]
+  }
+}
